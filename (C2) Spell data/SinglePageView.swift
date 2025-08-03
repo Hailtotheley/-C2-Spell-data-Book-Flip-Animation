@@ -12,8 +12,13 @@ struct SinglePageView: View {
     var config: Config = .init()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       Image("blank")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 600, height: 800)
+        
     }
+    
 }
 
 struct Config {

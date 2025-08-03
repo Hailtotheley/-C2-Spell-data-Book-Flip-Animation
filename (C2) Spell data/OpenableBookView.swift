@@ -51,6 +51,7 @@ struct OpenableBookView<Front: View, InsideLeft: View, InsideRight: View>:View, 
                         if -rotation > 90 {
                             insideLeft(size)
                                 .frame(width: size.width, height: size.height)
+                            //to make the imzge flipped
                                 .scaleEffect(x: -1)
                                 .transition(.identity)
                         }
