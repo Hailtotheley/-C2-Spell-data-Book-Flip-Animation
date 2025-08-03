@@ -9,27 +9,36 @@ import SwiftUI
 
 struct SinglePageView: View {
     var spell: Spell
-    var config: Config = .init()
     
     var body: some View {
-       Image("blank")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 600, height: 800)
-        
+        ZStack{
+            Image("blank")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 600, height: 800)
+            
+            VStack (alignment: .leading) {
+                HStack {
+                    Text(spell.name)
+                        .font(.system(size: 80))
+                        .bold()
+                    Spacer()
+                    Text("\(spell.mastery)%")
+                        .font(.system(size: 65))
+                }
+                Text("(\(spell.pronounciation))")
+                    .font(.system(size: 35))
+                    .underline()
+                Text(spell.description)
+                    .font(.system(size: 35))
+                Spacer()
+            }
+            .frame(width: 550, height: 790)
+            
+        }
     }
-    
-}
-
-struct Config {
-    var width: CGFloat = 600
-    var height: CGFloat = 800
-    var progress: CGFloat = 0
-    var cornerRadius: CGFloat = 10
-    var shadowColor: Color = .black
-    var dividerBackground: Color = .white
 }
 
 #Preview {
-    SinglePageView(spell: Spell(name: "Sampleio", mastery: 0, description:"It summons a sample", pronounciation: "Sam-puhl-lio"))
+    SinglePageView(spell: Spell(name: "Sampleio", mastery: 0, description:"It summons a sample spell that can be used to combat poor creativity", pronounciation: "Sam-puhl-lio"))
 }

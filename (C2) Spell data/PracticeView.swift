@@ -26,7 +26,6 @@ struct PracticeView: View {
             .padding(15)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.gray.opacity(0.15))
-            .navigationTitle("Book View")
         }
        
     }
