@@ -11,8 +11,9 @@ struct Spell: Identifiable, Hashable {
     var name: String
     var mastery: Int
     var description: String
+    var pronounciation: String
 
     static let sampleData = [
-        Spell(name: "Sampleio", mastery: 0, description:"It summons a sample")
+        Spell(name: "Sampleio", mastery: 0, description:"It summons a sample", pronounciation: "Sam-puhl-lio")
     ]
 }

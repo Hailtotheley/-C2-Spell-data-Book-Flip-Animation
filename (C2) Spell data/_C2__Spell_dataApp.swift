@@ -11,7 +11,7 @@ import SwiftUI
 struct _C2__Spell_dataApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PracticeView()
         }
     }
 }

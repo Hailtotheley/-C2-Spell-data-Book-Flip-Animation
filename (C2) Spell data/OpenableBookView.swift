@@ -87,6 +87,6 @@ struct OpenableBookView<Front: View, InsideLeft: View, InsideRight: View>:View, 
 
 
 #Preview {
-    ContentView()
+    PracticeView()
 }
 
