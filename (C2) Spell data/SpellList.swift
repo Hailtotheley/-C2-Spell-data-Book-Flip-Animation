@@ -12,7 +12,7 @@ let spells = [
     
     Spell(name: "Riddikulus", mastery: 0, description: "a charm used to defeat Boggarts by making them humorous", pronounciation: "Ri-dik-cu-lus"),
     
-    Spell(name: "Expecto Patronum", mastery: 0, description: "a complex defensive spell used to conjure a magical animal-shaped guardian called a Patronus which acts as a shield against dark creatures", pronounciation: "Ex-spect-to Pa-tro-num"),
+    Spell(name: "Expecto Patronum", mastery: 0, description: "a complex defensive spell used to conjure a magical animal-shaped guardian called a Patronus", pronounciation: "Ex-spect-to Pa-tro-num"),
     
     Spell(name: "Lumos", mastery: 0, description: "a basic spell that conjures a beam of light at the tip of a wizard's wand", pronounciation: "Loo-mos"),
     
