@@ -76,8 +76,8 @@ struct OpenableBookView<Front: View, InsideLeft: View, InsideRight: View>:View, 
     }
     //configuration
     struct Config {
-        var width: CGFloat = 150
-        var height: CGFloat = 200
+        var width: CGFloat = 600
+        var height: CGFloat = 800
         var progress: CGFloat = 0
         var cornerRadius: CGFloat = 10
         var shadowColor: Color = .black

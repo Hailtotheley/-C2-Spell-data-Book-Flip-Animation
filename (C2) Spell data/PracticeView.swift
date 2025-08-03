@@ -36,18 +36,6 @@ struct PracticeView: View {
                 }insideRight: { size in
                     RightView()
                 }
-                HStack(spacing: 12) {
-                    Slider(value: $progress)
-                    Button("Toggle"){
-                        withAnimation(.snappy(duration: 1)) {
-                            progress = (progress == 1.0 ? 0.2 : 1.0)
-                        }
-                    }
-                    .buttonStyle(.borderedProminent)
-                }
-                .padding(10)
-                .background(.background, in: .rect(cornerRadius: 10))
-                .padding(.top, 50)
             }
             .padding(15)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -59,10 +47,16 @@ struct PracticeView: View {
     // Front view
     @ViewBuilder
     func FrontView(_ size: CGSize) -> some View {
-        Image(.book1)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: size.width, height: size.height)
+        Button {
+            withAnimation(.snappy(duration: 1)) {
+                progress = (progress == 1.0 ? 0.2 : 1.0)
+            }
+        } label: {
+            Image(.book1)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: size.width, height: size.height)
+        }
         
     }
 
@@ -70,9 +64,15 @@ struct PracticeView: View {
     @ViewBuilder
     func LeftView() -> some View {
         VStack {
-            Image(.page1)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
+            Button {
+                withAnimation(.snappy(duration: 1)) {
+                    progress = (progress == 1.0 ? 0.2 : 1.0)
+                }
+            } label: {
+                Image(.page1)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            }
         }
        
     
