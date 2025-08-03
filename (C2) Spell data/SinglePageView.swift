@@ -11,31 +11,42 @@ struct SinglePageView: View {
     var spell: Spell
     
     var body: some View {
-        ZStack{
-            Image("blank")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 600, height: 800)
-            
-            VStack (alignment: .leading) {
-                HStack {
-                    Text(spell.name)
-                        .font(.system(size: 80))
-                        .bold()
+        Button {
+            // go into practice mode
+        } label: {
+            ZStack{
+                Image("blank")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 600, height: 800)
+                
+                VStack (alignment: .leading) {
+                    HStack {
+                        Text(spell.name)
+                            .font(.system(size: 70))
+                            .bold()
+                            .foregroundStyle(.black)
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                        Text("\(spell.mastery)%")
+                            .font(.system(size: 65))
+                            .foregroundStyle(.red)
+                    }
+                    Text("(\(spell.pronounciation))")
+                        .font(.system(size: 35))
+                        .underline()
+                        .foregroundStyle(.black)
+                    Text(spell.description)
+                        .font(.system(size: 35))
+                        .foregroundStyle(.black)
+                        .multilineTextAlignment(.leading)
                     Spacer()
-                    Text("\(spell.mastery)%")
-                        .font(.system(size: 65))
                 }
-                Text("(\(spell.pronounciation))")
-                    .font(.system(size: 35))
-                    .underline()
-                Text(spell.description)
-                    .font(.system(size: 35))
-                Spacer()
+                .frame(width: 550, height: 790)
+                
             }
-            .frame(width: 550, height: 790)
-            
         }
+    
     }
 }
 
